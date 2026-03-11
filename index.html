@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>День всех влюбленных 2025</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #2a0a3a 0%, #5f2a5a 30%, #551a4a 100%);
+            color: #fff;
+            overflow-x: hidden;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .background-animations {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .heart {
+            position: absolute;
+            top: -10px;
+            color: rgba(255, 200, 240, 0.8);
+            font-size: 20px;
+            animation: fall linear infinite;
+            user-select: none;
+        }
+
+        .floating-rose {
+            position: absolute;
+            font-size: 30px;
+            animation: float 8s ease-in-out infinite;
+            opacity: 0.6;
+            color: #d9b0ff;
+        }
+
+        .twinkling-star {
+            position: absolute;
+            font-size: 20px;
+            animation: twinkle 3s infinite alternate;
+            color: #f0d0ff;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh) rotate(360deg);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+        }
+
+        @keyframes twinkle {
+            0% { opacity: 0.2; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1.2); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            padding: 60px 0;
+            background: rgba(114, 60, 130, 0.4);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            margin-bottom: 40px;
+            border: 2px solid rgba(210, 140, 255, 0.6);
+            box-shadow: 0 10px 30px rgba(80, 30, 100, 0.6);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            animation: pulse 6s infinite;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #d896ff, #f0c0ff, #d896ff);
+        }
+
+        .title {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-shadow: 0 0 20px #d9a0ff;
+            animation: glow 2s ease-in-out infinite alternate;
+            background: linear-gradient(45deg, #f0c0ff, #ffffff, #e6b0ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 20px #d9a0ff;
+            }
+            to {
+                text-shadow: 0 0 30px #d9a0ff, 0 0 40px #b070ff;
+            }
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            color: #f5d0ff;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        .countdown-item {
+            background: rgba(114, 60, 130, 0.5);
+            padding: 20px;
+            border-radius: 15px;
+            min-width: 100px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(210, 140, 255, 0.7);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .countdown-item:hover {
+            transform: translateY(-5px);
+            background: rgba(114, 60, 130, 0.7);
+        }
+
+        .countdown-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            display: block;
+            color: #f0c0ff;
+            text-shadow: 0 0 10px rgba(210, 140, 255, 0.7);
+        }
+
+        .countdown-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            color: #f5d0ff;
+        }
+
+        .content-section {
+            background: rgba(200, 130, 230, 0.15);
+            padding: 40px;
+            border-radius: 20px;
+            margin: 40px 0;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(210, 140, 255, 0.5);
+            box-shadow: 0 10px 30px rgba(80, 30, 100, 0.4);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: #f0c0ff;
+            text-shadow: 0 0 10px rgba(210, 140, 255, 0.6);
+            text-align: center;
+        }
+
+        .text-content {
+            line-height: 1.7;
+            font-size: 1.1rem;
+        }
+
+        .text-content p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .text-content h3 {
+            color: #f0c0ff;
+            margin: 25px 0 15px 0;
+            font-size: 1.4rem;
+        }
+
+        .wishes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .wish-card {
+            background: rgba(114, 60, 130, 0.3);
+            padding: 25px;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(210, 140, 255, 0.5);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .wish-card:hover {
+            transform: translateY(-10px);
+            background: rgba(114, 60, 130, 0.5);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .wish-card h3 {
+            color: #f0c0ff;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .traditions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .tradition-card {
+            background: rgba(114, 60, 130, 0.3);
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid rgba(210, 140, 255, 0.5);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .tradition-card:hover {
+            transform: translateY(-5px);
+            background: rgba(114, 60, 130, 0.5);
+        }
+
+        .tradition-card h3 {
+            color: #f0c0ff;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .recipes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .recipe-card {
+            background: rgba(114, 60, 130, 0.3);
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid rgba(210, 140, 255, 0.5);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .recipe-card:hover {
+            transform: translateY(-5px);
+            background: rgba(114, 60, 130, 0.5);
+        }
+
+        .recipe-card h3 {
+            color: #f0c0ff;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .decoration {
+            font-size: 3rem;
+            margin: 20px 0;
+            animation: bounce 2s infinite;
+            filter: drop-shadow(0 0 5px #d9a0ff);
+            text-align: center;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .gift-button {
+            background: linear-gradient(45deg, #a05fa0, #d9a0ff, #f0c0ff);
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            color: white;
+            border-radius: 50px;
+            cursor: pointer;
+            margin: 30px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(114, 60, 130, 0.6);
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border: 1px solid #f0c0ff;
+        }
+
+        .gift-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(170, 100, 200, 0.8);
+        }
+
+        .footer {
+            margin-top: 60px;
+            padding: 20px;
+            background: rgba(114, 60, 130, 0.4);
+            border-radius: 15px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+            border: 1px solid rgba(210, 140, 255, 0.6);
+            text-align: center;
+        }
+
+        .tree-container {
+            position: fixed;
+            bottom: 0;
+            right: 50px;
+            font-size: 100px;
+            z-index: -1;
+            opacity: 0.2;
+            animation: sway 6s ease-in-out infinite alternate;
+            color: #f0c0ff;
+        }
+
+        @keyframes sway {
+            0% { transform: rotate(-5deg); }
+            100% { transform: rotate(5deg); }
+        }
+
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2.5rem;
+            }
+            
+            .countdown-item {
+                min-width: 70px;
+                padding: 15px;
+            }
+            
+            .tree-container {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-animations" id="backgroundAnimations"></div>
+    <div class="tree-container">💜</div>
+    
+    <div class="container">
+        <header class="header">
+            <div class="decoration">💘</div>
+            <h1 class="title">С Днём всех влюбленных!</h1>
+            <p class="subtitle">Пусть этот день наполнит ваши сердца нежностью, теплом и любовью!</p>
+            
+            <div class="countdown" id="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">00</span>
+                    <span class="countdown-label">дней</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">00</span>
+                    <span class="countdown-label">часов</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">00</span>
+                    <span class="countdown-label">минут</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">00</span>
+                    <span class="countdown-label">секунд</span>
+                </div>
+            </div>
+        </header>
+
+        <section class="content-section">
+            <h2 class="section-title">История Дня Святого Валентина</h2>
+            <div class="text-content">
+                <p>День святого Валентина, или День всех влюбленных, празднуется 14 февраля по всему миру. История праздника окутана тайнами и легендами. Одна из самых известных версий гласит, что римский император Клавдий II запретил солдатам жениться, чтобы они не отвлекались от службы. Священник Валентин тайно венчал влюбленные пары, за что был приговорен к казни.</p>
+                
+                <p>В тюрьме Валентин влюбился в дочь надзирателя — Юлию. Перед смертью 14 февраля 269 года он написал ей прощальное письмо, подписав его: "Твой Валентин". Позже церковь канонизировала его как святого, а влюбленные начали отмечать этот день, обмениваясь валентинками.</p>
+                
+                <h3>Распространение традиции</h3>
+                <p>Массово праздновать День святого Валентина начали в Британии в XIX веке, затем традиция распространилась в США и другие страны. Сегодня это день, когда люди дарят друг другу открытки в форме сердечек, конфеты, цветы и признаются в любви.</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">Романтические пожелания</h2>
+            <div class="wishes-grid">
+                <div class="wish-card">
+                    <h3>💜 Нежности</h3>
+                    <p>Пусть ваши отношения будут наполнены нежностью и заботой. Цените каждое мгновение, проведенное вместе, и дарите друг другу тепло.</p>
+                </div>
+                <div class="wish-card">
+                    <h3>💕 Гармонии</h3>
+                    <p>Желаю взаимопонимания и гармонии в паре. Пусть любовь с каждым днем становится только крепче, а чувства — ярче.</p>
+                </div>
+                <div class="wish-card">
+                    <h3>💞 Вдохновения</h3>
+                    <p>Пусть ваша вторая половинка вдохновляет вас на новые свершения, помогает расти и становиться лучше каждый день.</p>
+                </div>
+                <div class="wish-card">
+                    <h3>💘 Страсти</h3>
+                    <p>Огонь любви пусть горит ярко, даря страсть и романтику. Удивляйте друг друга и сохраняйте трепет в отношениях.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">Традиции праздника</h2>
+            <div class="traditions-grid">
+                <div class="tradition-card">
+                    <h3>💌 Валентинки</h3>
+                    <p>Обмен открытками в форме сердечек — главная традиция дня. Самую первую валентинку написал герцог Орлеанский своей жене из тюрьмы в 1415 году.</p>
+                </div>
+                <div class="tradition-card">
+                    <h3>🌹 Цветы и сладости</h3>
+                    <p>Красные розы символизируют любовь и страсть. Конфеты и шоколад дарят, чтобы подсластить жизнь любимому человеку.</p>
+                </div>
+                <div class="tradition-card">
+                    <h3>🍽️ Романтический ужин</h3>
+                    <p>Ужин при свечах в кафе или дома — идеальный способ провести вечер вдвоем. Многие рестораны предлагают специальное меню в этот день.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">Романтические рецепты</h2>
+            <div class="recipes-grid">
+                <div class="recipe-card">
+                    <h3>🍓 Клубника в шоколаде</h3>
+                    <p><strong>Ингредиенты:</strong> клубника, темный и белый шоколад, посыпка.</p>
+                    <p><strong>Приготовление:</strong> Растопите шоколад на водяной бане, обмакните ягоды наполовину, украсьте посыпкой и остудите.</p>
+                </div>
+                <div class="recipe-card">
+                    <h3>❤️ Сердечки из слоеного теста</h3>
+                    <p><strong>Ингредиенты:</strong> слоеное тесто, яблоко, сахар, корица.</p>
+                    <p><strong>Приготовление:</strong> Вырежьте сердечки, положите начинку из яблок с сахаром, запекайте 15-20 минут при 180°C.</p>
+                </div>
+            </div>
+            <div class="text-content">
+                <h3>Десерты для двоих</h3>
+                <p>Самый популярный десерт на День влюбленных — это фондю. Растопленный шоколад с фруктами и зефиром создает интимную и веселую атмосферу. Также популярны кексы и пирожные в форме сердечек с розовой или фиолетовой глазурью.</p>
+            </div>
+        </section>
+
+        <div class="decoration">💝</div>
+        <button class="gift-button" onclick="showSurprise()">Получить признание в любви!</button>
+
+        <footer class="footer">
+            <p>© 2025 День всех влюбленных. Любите и будьте любимы! 💜</p>
+            <p>Пусть ваше сердце всегда поет от счастья, а рядом будет надежное плечо.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Создание анимированных элементов
+        function createAnimations() {
+            const background = document.getElementById('backgroundAnimations');
+            const symbols = ['❤️', '💜', '💕', '💞', '💘', '🌸', '🌺', '💮'];
+            
+            // Падающие сердечки
+            for (let i = 0; i < 70; i++) {
+                const heart = document.createElement('div');
+                heart.className = 'heart';
+                heart.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.animationDuration = (Math.random() * 5 + 5) + 's';
+                heart.style.animationDelay = Math.random() * 5 + 's';
+                heart.style.opacity = Math.random() * 0.6 + 0.2;
+                heart.style.fontSize = (Math.random() * 20 + 15) + 'px';
+                background.appendChild(heart);
+            }
+            
+            // Парящие розы и цветы
+            const flowers = ['🌹', '🌷', '🌸', '🌺', '💐'];
+            for (let i = 0; i < 12; i++) {
+                const rose = document.createElement('div');
+                rose.className = 'floating-rose';
+                rose.textContent = flowers[Math.floor(Math.random() * flowers.length)];
+                rose.style.left = Math.random() * 100 + 'vw';
+                rose.style.top = Math.random() * 100 + 'vh';
+                rose.style.animationDelay = Math.random() * 8 + 's';
+                rose.style.fontSize = (Math.random() * 30 + 20) + 'px';
+                background.appendChild(rose);
+            }
+            
+            // Мерцающие звездочки
+            for (let i = 0; i < 30; i++) {
+                const star = document.createElement('div');
+                star.className = 'twinkling-star';
+                star.textContent = '✨';
+                star.style.left = Math.random() * 100 + 'vw';
+                star.style.top = Math.random() * 100 + 'vh';
+                star.style.animationDelay = Math.random() * 3 + 's';
+                star.style.fontSize = (Math.random() * 15 + 10) + 'px';
+                background.appendChild(star);
+            }
+        }
+
+        // Обратный отсчет до Дня Святого Валентина (14 февраля)
+        function updateCountdown() {
+            const now = new Date();
+            let targetYear = now.getFullYear();
+            const targetDate = new Date(`February 14, ${targetYear} 00:00:00`);
+            
+            // Если дата уже прошла в этом году, берем следующий год
+            if (now > targetDate) {
+                targetDate.setFullYear(targetYear + 1);
+            }
+            
+            const diff = targetDate - now;
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            document.getElementById('days').textContent = days.toString().padStart(2, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+
+        // Романтический сюрприз
+        function showSurprise() {
+            const surprises = [
+                "💜 Ты самое прекрасное, что случилось в моей жизни!",
+                "💕 Твое сердце полно любви, и сегодня она найдет отклик!",
+                "💞 Кто-то думает о тебе прямо сейчас и улыбается...",
+                "💘 Сегодня тебя ждет признание или приятный сюрприз!",
+                "🌸 Любовь витает в воздухе — дыши полной грудью!",
+                "💗 Ты достоин(на) самой чистой и искренней любви!",
+                "💖 Открой свое сердце навстречу новым чувствам!"
+            ];
+            
+            const randomSurprise = surprises[Math.floor(Math.random() * surprises.length)];
+            alert(`✨ Романтический оракул шепчет:\n\n${randomSurprise}\n\nС Днем Святого Валентина! 💜`);
+        }
+
+        // Инициализация
+        createAnimations();
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Мерцание декоративных элементов
+        const decorations = document.querySelectorAll('.decoration');
+        setInterval(() => {
+            decorations.forEach(deco => {
+                deco.style.filter = `drop-shadow(0 0 ${Math.random() * 10 + 5}px #d9a0ff)`;
+            });
+        }, 1000);
+    </script>
+</body>
+</html>
